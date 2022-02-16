@@ -8,6 +8,7 @@ require_relative "install_dash_docs/lockfile"
 module Bundler
   module InstallDashDocs
     class ArgumentError < StandardError; end
+
     class FileNotFound < StandardError; end
   end
 end

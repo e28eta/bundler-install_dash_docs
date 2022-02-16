@@ -1,14 +1,13 @@
-require 'thor'
+require "thor"
 require "bundler/install_dash_docs"
 
 module Bundler
   module InstallDashDocs
     class CLI < ::Thor
-
       desc "install", "Install docsets for all gems in this bundle into Dash.app"
-      method_option :quiet, type: :boolean, default: false, aliases: '-q', desc: "Supresses normal output of the gem names and versions"
-      method_option :dry_run, type: :boolean, default: false, aliases: '-n', desc: "Print out what would be performed, but do not install docsets in Dash"
-      method_option :gemfile_lock, type: :string, lazy_default: "", aliases: '-G', desc: "Provide custom path to the Gemfile.lock to parse"
+      method_option :quiet, type: :boolean, default: false, aliases: "-q", desc: "Supresses normal output of the gem names and versions"
+      method_option :dry_run, type: :boolean, default: false, aliases: "-n", desc: "Print out what would be performed, but do not install docsets in Dash"
+      method_option :gemfile_lock, type: :string, lazy_default: "", aliases: "-G", desc: "Provide custom path to the Gemfile.lock to parse"
       method_option :trace, type: :boolean, default: false, desc: "Print commands executed"
       method_option :dependencies_only, type: :boolean, default: false, desc: "Default behavior is to install all gems from the Gemfile.lock. This option only installs those found in the Dependencies section, which are the ones explicitly listed in the Gemfile"
       def install
@@ -26,7 +25,7 @@ module Bundler
         puts
 
         gems.map { |name, version| DashUrl.new(name, version) }
-        .each { |url|
+          .each { |url|
           puts "Installing docs for #{url.gem_name} #{url.version}" unless quiet
           command = [
             "open",
