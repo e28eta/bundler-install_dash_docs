@@ -1,5 +1,4 @@
 require "thor"
-require "bundler/install_dash_docs"
 
 module Bundler
   module InstallDashDocs
