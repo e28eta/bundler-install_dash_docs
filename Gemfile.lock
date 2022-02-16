@@ -3,6 +3,7 @@ PATH
   specs:
     bundler-install_dash_docs (0.1.0)
       addressable (~> 2.2)
+      thor (~> 1.2)
 
 GEM
   remote: https://rubygems.org/
@@ -37,6 +38,7 @@ GEM
     standard (1.7.2)
       rubocop (= 1.25.1)
       rubocop-performance (= 1.13.2)
+    thor (1.2.1)
     unicode-display_width (2.1.0)
 
 PLATFORMS

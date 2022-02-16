@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require "bundler/install_dash_docs/cli"
+Bundler::InstallDashDocs::CLI.start
