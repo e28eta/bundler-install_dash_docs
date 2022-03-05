@@ -27,6 +27,8 @@ jobs:
     - name: Run the default task
       run: bundle exec rake
     - name: Install gem
-      run: bundle exec rake install && gem info bundler-install_dash_docs
+      run: bundle exec rake install
+    - name: Print gem info
+      run: gem info bundler-install_dash_docs
     - name: Install bundler plugin
       run: bundle plugin install bundler-install_dash_docs
