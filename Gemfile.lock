@@ -11,6 +11,7 @@ GEM
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
+    gem-release (2.2.2)
     minitest (5.15.0)
     parallel (1.21.0)
     parser (3.1.0.0)
@@ -46,6 +47,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler-install_dash_docs!
+  gem-release
   minitest (~> 5.0)
   rake (~> 13.0)
   standard (~> 1.3)
