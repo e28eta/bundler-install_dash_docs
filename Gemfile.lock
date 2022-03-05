@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bundler-install_dash_docs (0.1.0)
+    bundler-install_dash_docs (0.1.0-universal-darwin)
       addressable (~> 2.2)
       thor (~> 1.2)
 
@@ -42,7 +42,7 @@ GEM
     unicode-display_width (2.1.0)
 
 PLATFORMS
-  x86_64-darwin-21
+  universal-darwin
 
 DEPENDENCIES
   bundler-install_dash_docs!

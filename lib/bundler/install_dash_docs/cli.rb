@@ -23,19 +23,8 @@ module Bundler
         end
         puts
 
-        gems.map { |name, version| DashUrl.new(name, version) }
-          .each { |url|
-          puts "Installing docs for #{url.gem_name} #{url.version}" unless quiet
-          command = [
-            "open",
-            "-g",
-            url.to_str
-          ]
-          puts("+ " + command.join(" ")) if options[:trace]
-          unless options[:dry_run]
-            system(*command)
-            sleep 2
-          end
+        gems.each { |name, version|
+          Dash.install(name, version, quiet, options[:trace], options[:dry_run])
         }
       end
 

@@ -9,12 +9,13 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     name: Ruby ${{ matrix.ruby }}
     strategy:
       matrix:
         ruby:
           - '3.1.0'
+          - '2.6.0'
 
     steps:
     - uses: actions/checkout@v2
