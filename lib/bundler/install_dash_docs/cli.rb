@@ -33,6 +33,10 @@ module Bundler
         puts "bundler-install_dash_docs #{VERSION}"
       end
 
+      def self.exit_on_failure?
+        true
+      end
+
       private
 
       def read_custom_gemfile_lock(gemfile, quiet)
