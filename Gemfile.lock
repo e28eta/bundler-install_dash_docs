@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bundler-install_dash_docs (0.1.0-universal-darwin)
+    bundler-install_dash_docs (0.1.1-universal-darwin)
       addressable (~> 2.2)
       thor (~> 1.2)
 
