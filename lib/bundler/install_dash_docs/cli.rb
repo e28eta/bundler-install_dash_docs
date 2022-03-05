@@ -1,8 +1,11 @@
 require "thor"
+require "bundler"
 
 module Bundler
   module InstallDashDocs
     class CLI < ::Thor
+      ::Bundler::Plugin::API.command("install_dash_docs", self)
+
       desc "install", "Install docsets for all gems in this bundle into Dash.app"
       method_option :quiet, type: :boolean, default: false, aliases: "-q", desc: "Supresses normal output of the gem names and versions"
       method_option :dry_run, type: :boolean, default: false, aliases: "-n", desc: "Print out what would be performed, but do not install docsets in Dash"
