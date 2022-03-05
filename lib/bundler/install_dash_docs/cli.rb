@@ -24,7 +24,7 @@ module Bundler
         puts
 
         gems.each { |name, version|
-          Dash.install(name, version, quiet, options[:trace], options[:dry_run])
+          Dash.install(name, version, quiet: quiet, trace: options[:trace], dry_run: options[:dry_run])
         }
       end
 
