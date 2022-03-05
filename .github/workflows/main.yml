@@ -26,3 +26,7 @@ jobs:
         bundler-cache: true
     - name: Run the default task
       run: bundle exec rake
+    - name: Install gem
+      run: bundle exec rake install
+    - name: Install bundler plugin
+      run: bundle plugin install bundler-install_dash_docs
